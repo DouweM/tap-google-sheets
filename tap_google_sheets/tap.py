@@ -110,8 +110,7 @@ class TapGoogleSheets(Tap):
             tap=self,
             name="config",
             schema={"not": "null"},
-            path="https://sheets.googleapis.com/v4/spreadsheets/"
-            + self.config["sheet_id"]
+            path=self.config["sheet_id"]
             + "/values/"
             + self.config.get("child_sheet_name", "")
             + "!1:1",
